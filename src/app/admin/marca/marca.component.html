@@ -1,0 +1,24 @@
+<!--Cuerpo del documento-->
+<mat-card class="example-card">
+  <mat-card-header>
+      <div mat-card-avatar class="example-header-image">
+      </div>
+      <mat-card-title>Marcas</mat-card-title>
+      <mat-card-subtitle>
+          <button mat-raised-button color="primary" (click)="mostrarCreateMarca()">{{btnCreateMarca}}</button>
+      </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content *ngIf="flagCreateMarca">
+      <!--Create Marca-->
+      <app-create-marca></app-create-marca>
+      <!--Create Marca-->
+  </mat-card-content>
+  <!--List Marca-->
+  <mat-slide-toggle (change)="mostrarListMarca()">
+      Listar marcas
+  </mat-slide-toggle>
+  <div *ngIf="flagListMarca">
+      <app-list-marca></app-list-marca>
+  </div>
+  <!--List Marca-->
+</mat-card>
