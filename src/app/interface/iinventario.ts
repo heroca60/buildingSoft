@@ -1,6 +1,6 @@
 export interface Iinventario {
     id?:string;
-    codigo:string;
+    codigo:number;
     nombre:string;
     descripcion:string;
     marca:string;    

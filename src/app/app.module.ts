@@ -12,6 +12,7 @@ import { environment } from '../environments/environment';
 export const firebaseConfig = environment.firebaseConfig;
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire';
+import { FirestoreSettingsToken } from '@angular/fire/firestore';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,13 +30,13 @@ import { ReadInventarioComponent } from './admin/inventario/read-inventario/read
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,    
-    HomeComponent, 
-    MarcaComponent, 
-    CreateMarcaComponent, 
-    ListMarcaComponent, 
-    ReadMarcaComponent,     
-    InventarioComponent, CreateInventarioComponent, ListInventarioComponent, ReadInventarioComponent    
+    MenuComponent,
+    HomeComponent,
+    MarcaComponent,
+    CreateMarcaComponent,
+    ListMarcaComponent,
+    ReadMarcaComponent,
+    InventarioComponent, CreateInventarioComponent, ListInventarioComponent, ReadInventarioComponent
   ],
   imports: [
     BrowserModule,
@@ -45,11 +46,11 @@ import { ReadInventarioComponent } from './admin/inventario/read-inventario/read
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
-      //Inicialización de Firebase
-      AngularFireModule.initializeApp(firebaseConfig),
-      AngularFirestoreModule
+    //Inicialización de Firebase
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule
   ],
-  providers: [],
+  providers: [{ provide: FirestoreSettingsToken, useValue: {} }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

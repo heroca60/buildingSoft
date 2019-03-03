@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { InventarioService } from '../../../services/inventario.service';
+import { Cinventario } from '../../../model/cinventario';
+import { MatPaginator,MatTableDataSource } from '@angular/material';
+
 
 @Component({
   selector: 'app-list-inventario',
@@ -6,10 +10,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-inventario.component.css']
 })
 export class ListInventarioComponent implements OnInit {
+  inventarios: Cinventario[];
+  displayedColumns: string[] = ['id', 'codigo',
+    'nombre', 'descripcion', 'marca', 'categoria', 'precio'];
 
-  constructor() { }
-
+  constructor(private ns: InventarioService) {
+  }  
   ngOnInit() {
+    this.getInventarios();    
+  }
+
+  getInventarios(): void {
+    this.ns.getInventarios().subscribe(inventarios => this.inventarios = inventarios);
   }
 
 }

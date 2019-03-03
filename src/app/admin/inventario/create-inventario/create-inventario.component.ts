@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-//import { InventarioService } from '../../../services/inventario.service';
-//import { Cinventario } from '../../../model/cinventario';
+import { InventarioService } from '../../../services/inventario.service';
+import { Cinventario } from '../../../model/cinventario';
 import { Validators, FormBuilder } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
 
@@ -9,7 +9,9 @@ import { MatSnackBar } from '@angular/material';
   templateUrl: './create-inventario.component.html',
   styleUrls: ['./create-inventario.component.css']
 })
-export class CreateInventarioComponent implements OnInit {
+export class CreateInventarioComponent implements OnInit {  
+  inventario: Cinventario;
+  //
   inventarioForm = this.fb.group({
     codigo: [''],
     nombre: ['', Validators.required],
@@ -19,7 +21,11 @@ export class CreateInventarioComponent implements OnInit {
     precio: ['', Validators.required]
   });
   flagProgress: boolean = false;
-  constructor(private fb: FormBuilder, private snackBar: MatSnackBar) {
+
+  constructor(private fb: FormBuilder,
+    private snackBar: MatSnackBar,
+    private ns: InventarioService) {
+    this.inventario = new Cinventario;
   }
   ngOnInit() {
 
@@ -31,14 +37,23 @@ export class CreateInventarioComponent implements OnInit {
     });
   }
 
-  onSubmit(): void {
+  onSubmit(): void {    
     if (this.inventarioForm.status == "VALID") {
-      this.flagProgress = true;
-      this.openSnackBar("Transacción exitosa","Guardar");
+      this.inventario.codigo = this.inventarioForm.get('codigo').value;
+      this.inventario.nombre = this.inventarioForm.get('nombre').value;
+      this.inventario.descripcion = this.inventarioForm.get('descripcion').value;
+      this.inventario.marca = this.inventarioForm.get('marca').value;
+      this.inventario.categoria = this.inventarioForm.get('categoria').value;
+      this.inventario.precio = this.inventarioForm.get('precio').value;      
+      //activando barra de progreso de transaccion
+      //this.flagProgress = true;
+      //mandando el objeto inventario para la insercion
+      this.ns.postInventario(this.inventario);
+      //Mensaje de transacción realizada
+      this.openSnackBar("Transacción exitosa", "Guardar");
+         
     } else {
       this.flagProgress = false;
     }
-
-  }
-
+  }  
 }

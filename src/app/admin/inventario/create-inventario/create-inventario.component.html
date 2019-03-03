@@ -1,29 +1,49 @@
 <mat-card>
-<form [formGroup]="inventarioForm" (ngSubmit)="onSubmit()">
-    <mat-form-field class="example-full-width">
-        <input matInput placeholder="Codigo de barras" value="" formControlName="codigo">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-        <input matInput placeholder="Nombre del producto" value="" formControlName="nombre" required>
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-        <input matInput placeholder="Descripción del producto:" value="" formControlName="descripcion" required>
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-        <input matInput placeholder="Marca: " value="" formControlName="marca" required>
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-        <input matInput placeholder="Categoria: " value="" formControlName="categoria" required>
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-        <input matInput placeholder="Precio" value="" formControlName="precio" required>
-    </mat-form-field>
-    <div style="text-align: right">
-        <label>* Campos obligatorios</label>
-    </div>
-    <br>
-    <button mat-raised-button color="primary" type="submit">Guardar</button>
-</form>
+    <form [formGroup]="inventarioForm" (ngSubmit)="onSubmit()">
+        <mat-grid-list cols="2" rowHeight="75px">
+            <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Codigo de barras" value="" formControlName="codigo">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Nombre del producto" value="" formControlName="nombre" required>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Descripción del producto:" value="" formControlName="descripcion"
+                        required>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Marca: " value="" formControlName="marca" required>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Categoria: " value="" formControlName="categoria" required>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Precio" value="" formControlName="precio" required>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div style="text-align: left">
+                    <button mat-raised-button color="primary" type="submit">Guardar</button>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div style="text-align: right">
+                    <label>* Campos obligatorios</label>
+                </div>
+            </mat-grid-tile>            
+        </mat-grid-list>
+    </form>
 </mat-card>
 <br>
 <div>
@@ -31,5 +51,6 @@
 </div>
 
 <p>
+
     Form Status: {{ inventarioForm.status }}
 </p>

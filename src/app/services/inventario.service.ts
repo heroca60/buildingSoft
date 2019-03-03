@@ -30,40 +30,40 @@ export class InventarioService {
       )
   }
 
-  postInventario(n: Cinventario) {
+  postInventario(inventario: Cinventario) {    
     try {
       this.afs.collection('inventario').add({
-        codigo:n.codigo,
-        nombre:n.nombre,
-        descripcion:n.descripcion,
-        marca:n.marca,
-        categoria:n.categoria,
-        precio:n.precio
+        codigo: inventario.codigo,
+        nombre: inventario.nombre,
+        descripcion: inventario.descripcion,
+        marca: inventario.marca,
+        categoria: inventario.categoria,
+        precio: inventario.precio               
       });
     } catch (error) {
       console.log(error)
     }
   }
 
-  putInventario(n: Cinventario) {
+  putInventario(inventario: Cinventario) {
     try {
-      this.inventariosCollections.doc(n.id).update(
-        { 
-          codigo:n.codigo,
-          nombre:n.nombre,
-          descripcion:n.descripcion,
-          marca:n.marca,
-          categoria:n.categoria,
-          precio:n.precio
+      this.inventariosCollections.doc(inventario.id).update(
+        {
+          codigo: inventario.codigo,
+          nombre: inventario.nombre,
+          descripcion: inventario.descripcion,
+          marca: inventario.marca,
+          categoria: inventario.categoria,
+          precio: inventario.precio
         });
     } catch (error) {
       console.log(error);
     }
   }
 
-  deleteInventario(n: Cinventario) {
+  deleteInventario(inventario: Cinventario) {
     try {
-      this.inventariosCollections.doc(n.id).delete();
+      this.inventariosCollections.doc(inventario.id).delete();
     } catch (error) {
       console.log(error);
     }
