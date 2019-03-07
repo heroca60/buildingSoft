@@ -1,0 +1,71 @@
+<mat-card>
+  <mat-horizontal-stepper linear #stepper>
+    <mat-step [stepControl]="clienteFormGroup">
+      <form [formGroup]="clienteFormGroup">
+        <ng-template matStepLabel>Datos del cliente</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Nit" (keyup)="applyFilter($event.target.value)" formControlName="nit" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Nombre" formControlName="nombre" required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Direccion" formControlName="direccion" required>
+        </mat-form-field>
+        <div class="mat-elevation-z8">
+          <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+            <!-- Position Column -->
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef> Nit </th>
+              <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="nombre">
+              <th mat-header-cell *matHeaderCellDef> Nombre </th>
+              <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="direccion">
+              <th mat-header-cell *matHeaderCellDef> Dirección </th>
+              <td mat-cell *matCellDef="let element"> {{element.direccion}} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          <!--
+          <div class="example-no-results" [style.display]="(element.id | async)?.length">
+            No accounts found matching filter.
+          </div>
+          -->
+          <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20, 25, 30]">
+          </mat-paginator>
+        </div>
+        <div>
+          <button mat-button matStepperNext>Siguiente</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="pedidoFormGroup">
+      <form [formGroup]="pedidoFormGroup">
+        <ng-template matStepLabel>Datos para el pedido</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Address" formControlName="adress" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Realizado</ng-template>
+      You are now done.
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</mat-card>

@@ -4,6 +4,7 @@ export interface Iinventario {
     nombre:string;
     descripcion:string;
     marca:string;    
-    categoria:string
+    categoria:string;
+    existencia:number;
     precio:number;    
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { InventarioService } from '../../../services/inventario.service';
 import { Cinventario } from '../../../model/cinventario';
-import { MatPaginator,MatTableDataSource } from '@angular/material';
 
 
 @Component({
@@ -12,7 +11,7 @@ import { MatPaginator,MatTableDataSource } from '@angular/material';
 export class ListInventarioComponent implements OnInit {
   inventarios: Cinventario[];
   displayedColumns: string[] = ['id', 'codigo',
-    'nombre', 'descripcion', 'marca', 'categoria', 'precio'];
+    'nombre', 'descripcion', 'marca', 'categoria', 'existencia', 'precio'];
 
   constructor(private ns: InventarioService) {
   }  

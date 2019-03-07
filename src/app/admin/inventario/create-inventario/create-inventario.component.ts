@@ -9,7 +9,7 @@ import { MatSnackBar } from '@angular/material';
   templateUrl: './create-inventario.component.html',
   styleUrls: ['./create-inventario.component.css']
 })
-export class CreateInventarioComponent implements OnInit {  
+export class CreateInventarioComponent implements OnInit {
   inventario: Cinventario;
   //
   inventarioForm = this.fb.group({
@@ -18,7 +18,14 @@ export class CreateInventarioComponent implements OnInit {
     descripcion: ['', Validators.required],
     marca: ['', Validators.required],
     categoria: ['', Validators.required],
-    precio: ['', Validators.required]
+    existencia: ['', Validators.compose([
+      Validators.required,
+      Validators.pattern('[0-9]*')
+    ])],
+    precio: ['', Validators.compose([
+      Validators.required,
+      Validators.pattern('[0-9]*.[0-9]{2}')
+    ])],
   });
   flagProgress: boolean = false;
 
@@ -37,23 +44,37 @@ export class CreateInventarioComponent implements OnInit {
     });
   }
 
-  onSubmit(): void {    
+  onSubmit(): void {
     if (this.inventarioForm.status == "VALID") {
       this.inventario.codigo = this.inventarioForm.get('codigo').value;
       this.inventario.nombre = this.inventarioForm.get('nombre').value;
       this.inventario.descripcion = this.inventarioForm.get('descripcion').value;
       this.inventario.marca = this.inventarioForm.get('marca').value;
       this.inventario.categoria = this.inventarioForm.get('categoria').value;
-      this.inventario.precio = this.inventarioForm.get('precio').value;      
+      this.inventario.existencia = this.inventarioForm.get('existencia').value;
+      this.inventario.precio = this.inventarioForm.get('precio').value;
       //activando barra de progreso de transaccion
-      //this.flagProgress = true;
+      this.flagProgress = true;
       //mandando el objeto inventario para la insercion
-      this.ns.postInventario(this.inventario);
-      //Mensaje de transacción realizada
-      this.openSnackBar("Transacción exitosa", "Guardar");
-         
+      this.ns.postInventario(this.inventario)
+        .then(() => this.openSnackBar("Transacción exitosa", "Guardar"))
+        .catch(() => this.openSnackBar("Ocurrió un error", "Error"))
+        .finally(() => this.flagProgress = false)
+      //this.cleanInputform();
     } else {
       this.flagProgress = false;
     }
-  }  
+  }
+
+  cleanInputform() {
+    this.inventarioForm.setValue({
+      codigo: '',
+      nombre: '',
+      descripcion: '',
+      marca: '',
+      categoria: '',
+      existencia: '',
+      precio: ''
+    })
+  }
 }

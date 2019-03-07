@@ -26,6 +26,8 @@ import { InventarioComponent } from './admin/inventario/inventario.component';
 import { CreateInventarioComponent } from './admin/inventario/create-inventario/create-inventario.component';
 import { ListInventarioComponent } from './admin/inventario/list-inventario/list-inventario.component';
 import { ReadInventarioComponent } from './admin/inventario/read-inventario/read-inventario.component';
+import { VentasComponent } from './cajero/ventas/ventas.component';
+import { PedidoComponent } from './pedido/pedido/pedido.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,12 @@ import { ReadInventarioComponent } from './admin/inventario/read-inventario/read
     CreateMarcaComponent,
     ListMarcaComponent,
     ReadMarcaComponent,
-    InventarioComponent, CreateInventarioComponent, ListInventarioComponent, ReadInventarioComponent
+    InventarioComponent,
+    CreateInventarioComponent,
+    ListInventarioComponent, 
+    ReadInventarioComponent, 
+    VentasComponent, 
+    PedidoComponent    
   ],
   imports: [
     BrowserModule,

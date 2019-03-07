@@ -29,19 +29,23 @@
             </mat-grid-tile>
             <mat-grid-tile>
                 <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Precio" value="" formControlName="precio" required>
+                    <input matInput placeholder="Existencia" value="" formControlName="existencia" required>
                 </mat-form-field>
             </mat-grid-tile>
             <mat-grid-tile>
-                <div style="text-align: left">
-                    <button mat-raised-button color="primary" type="submit">Guardar</button>
-                </div>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Precio" value="" formControlName="precio" required>
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile></mat-grid-tile>
+            <mat-grid-tile style="text-align: left">
+                <button mat-raised-button color="primary" type="submit">Guardar</button>
             </mat-grid-tile>
             <mat-grid-tile>
                 <div style="text-align: right">
                     <label>* Campos obligatorios</label>
                 </div>
-            </mat-grid-tile>            
+            </mat-grid-tile>
         </mat-grid-list>
     </form>
 </mat-card>
@@ -49,8 +53,3 @@
 <div>
     <mat-progress-bar mode="indeterminate" *ngIf="flagProgress"></mat-progress-bar>
 </div>
-
-<p>
-
-    Form Status: {{ inventarioForm.status }}
-</p>

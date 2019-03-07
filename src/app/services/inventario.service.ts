@@ -30,19 +30,25 @@ export class InventarioService {
       )
   }
 
-  postInventario(inventario: Cinventario) {    
-    try {
-      this.afs.collection('inventario').add({
-        codigo: inventario.codigo,
-        nombre: inventario.nombre,
-        descripcion: inventario.descripcion,
-        marca: inventario.marca,
-        categoria: inventario.categoria,
-        precio: inventario.precio               
-      });
-    } catch (error) {
-      console.log(error)
-    }
+  postInventario(inventario: Cinventario) {
+    var promesa = new Promise((resolve, reject) => {
+      try {
+        this.afs.collection('inventario').add({
+          codigo: inventario.codigo,
+          nombre: inventario.nombre,
+          descripcion: inventario.descripcion,
+          marca: inventario.marca,
+          categoria: inventario.categoria,
+          existencia: inventario.existencia,
+          precio: inventario.precio
+        });
+        resolve();
+      } catch (error) {
+        reject();
+        console.log(error)
+      }
+    })
+    return promesa;
   }
 
   putInventario(inventario: Cinventario) {
