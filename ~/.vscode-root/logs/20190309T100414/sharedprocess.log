@@ -1,0 +1,60 @@
+[2019-03-09 10:04:19.689] [sharedprocess] [info] main {"machineId":"8072d64c98fbd27079ee1d2781432050296582995643cb90d4499b7ade85b665"}
+[2019-03-09 10:04:20.382] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 10:04:20.541] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 10:04:20.546] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 10:04:22.100] [sharedprocess] [info] Scanned system extensions: 71
+[2019-03-09 10:04:22.101] [sharedprocess] [info] Deleted from disk dbaeumer.vscode-eslint /home/hcalderon/.vscode/extensions/dbaeumer.vscode-eslint-1.8.0
+[2019-03-09 10:04:22.102] [sharedprocess] [info] Scanned system extensions: 71
+[2019-03-09 10:04:22.107] [sharedprocess] [info] Scanned system extensions: 71
+[2019-03-09 10:04:24.339] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 10:04:26.668] [sharedprocess] [info] Installing extension: dbaeumer.vscode-eslint
+[2019-03-09 10:04:26.671] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 10:04:27.322] [sharedprocess] [info] Downloaded extension: dbaeumer.vscode-eslint /tmp/d04a6a50-cf39-41c1-ba14-cf068880bfef
+[2019-03-09 10:04:28.590] [sharedprocess] [info] Extracted extension to /home/hcalderon/.vscode/extensions/.dbaeumer.vscode-eslint-1.8.2: dbaeumer.vscode-eslint
+[2019-03-09 10:04:28.591] [sharedprocess] [info] Renamed to /home/hcalderon/.vscode/extensions/dbaeumer.vscode-eslint-1.8.2
+[2019-03-09 10:04:28.593] [sharedprocess] [info] Installation completed. dbaeumer.vscode-eslint
+[2019-03-09 10:04:28.948] [sharedprocess] [info] Extensions installed successfully: dbaeumer.vscode-eslint
+[2019-03-09 10:04:59.699] [sharedprocess] [info] Starting to clean up unused language packs.
+[2019-03-09 10:09:24.802] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 10:14:24.823] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 10:19:24.843] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 10:24:24.859] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 10:29:24.875] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 10:34:24.897] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 10:39:24.916] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 10:44:24.935] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 10:49:24.962] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 10:54:24.981] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 10:59:25.000] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 11:04:25.019] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 11:09:25.428] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 11:14:25.443] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 11:19:25.504] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 11:24:25.522] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 11:29:25.538] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 11:34:25.555] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 11:39:25.601] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 11:44:25.617] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 11:49:25.634] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 11:54:25.652] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 11:59:25.667] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 12:04:25.681] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 12:09:28.892] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 12:14:28.926] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 12:19:28.942] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 12:24:28.958] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 12:29:28.977] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 12:34:28.997] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 12:39:29.014] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 12:44:29.034] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 12:49:29.052] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 12:54:29.068] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 12:59:29.089] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 13:04:29.108] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 13:09:29.901] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 13:14:29.922] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 13:19:29.936] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 13:24:29.955] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 13:29:29.961] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 13:34:29.975] [sharedprocess] [info] Scanned user extensions: 1
+[2019-03-09 13:39:29.993] [sharedprocess] [info] Scanned user extensions: 1

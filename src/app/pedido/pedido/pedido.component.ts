@@ -6,7 +6,8 @@ import {
   MatSnackBar,
   MatPaginator,
   MatTableDataSource,
-  MatSort
+  MatSort,
+  MatStepper
 } from '@angular/material';
 
 @Component({
@@ -24,9 +25,14 @@ export class PedidoComponent implements OnInit {
   displayedColumns: string[] = [
     'id',
     'nombre',
-    'direccion'
+    'direccion',
+    'actions'
   ];
   dataSource = new MatTableDataSource<Ccliente>();
+  dataLength: any;
+  //Control del acordion
+  panelOpenState = false;
+  accionCliente:string = "Guardar"
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -66,11 +72,11 @@ export class PedidoComponent implements OnInit {
   getClientes(): void {
     this.ns.getClientes().subscribe(data => {
       this.dataSource.data = data;
-      console.log(this.dataSource.data);
+      this.dataLength = data;
     });
   }
   onSubmitCliente(): void {
-    if (this.clienteFormGroup.status == "VALID") {
+    if (this.clienteFormGroup.status == "VALID" && this.accionCliente == "Guardar") {
       this.cliente.id = this.clienteFormGroup.get('nit').value;
       this.cliente.nombre = this.clienteFormGroup.get('nombre').value;
       this.cliente.direccion = this.clienteFormGroup.get('direccion').value;
@@ -86,5 +92,15 @@ export class PedidoComponent implements OnInit {
     }
   }
 
+  agregarPedido(id:any, nombre:any, direccion:any, stepper:MatStepper): void {
+      this.clienteFormGroup.setValue({
+        nit: id,
+        nombre: nombre,
+        direccion: direccion
+      })
+      console.log(this.clienteFormGroup.get('nit').value,+" - "+this.clienteFormGroup.get('nombre').value+" - "+this.clienteFormGroup.get('direccion').value)
+      this.accionCliente = "Modificar";
+      stepper.next();
+  }
 
 }

@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
+
 // Firebase Modules
 import { environment } from '../environments/environment';
 export const firebaseConfig = environment.firebaseConfig;
