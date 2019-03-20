@@ -3,4 +3,33 @@ table {
   }
 tr.mat-footer-row {
     font-weight: bold;
+    text-align: center;
+    color: lightgrey;
+}
+#container{
+  overflow:hidden;
+  width: 100%;
+
+}
+
+.A{
+  width: 40%;
+}
+.B{
+  margin-left: 10px;
+  width: 58.5%;
+
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#container .A, #container .B{
+  display: block;
+  float: left;
+  height: 100%;
+}
+
+.detallePedido{
+  margin-top: 10px;
 }

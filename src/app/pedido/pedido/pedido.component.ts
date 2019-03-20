@@ -9,16 +9,11 @@ import {
   MatSort,
   MatStepper,
   MatDialog,
-  
+
 } from '@angular/material';
-
-import { Cinventario } from 'src/app/model/cinventario';
-
-export interface DialogData {
-  animal: string;
-  name: string;
-}
-
+import { FacturaService } from 'src/app/services/factura.service';
+import { Cfactura } from 'src/app/model/cfactura';
+import { FacturasClienteComponent } from '../facturas-cliente/facturas-cliente.component';
 
 @Component({
   selector: 'app-pedido',
@@ -26,8 +21,9 @@ export interface DialogData {
   styleUrls: ['./pedido.component.css']
 })
 export class PedidoComponent implements OnInit {
-  cliente: Ccliente;  
+  cliente: Ccliente;
   clientes: Ccliente[];
+  factura: Cfactura;  
   isLinear = true;
   clienteFormGroup: FormGroup;
   pedidoFormGroup: FormGroup;
@@ -39,36 +35,35 @@ export class PedidoComponent implements OnInit {
     'direccion',
     'actions'
   ];
- 
+
   //dataSource para cargar los clientes
   dataSource = new MatTableDataSource<Ccliente>();
- 
   //variable para la cantidad de clientes
   dataLength: any;
-  
   //Control del acordion
   panelOpenState = false;
   //esta variable sirve para asignar el nombre del botón
   accionCliente: string = "Guardar"
   //Para la paginación del mat-table
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  
   //Para el ordenamieto del mat-table
   @ViewChild(MatSort) sort: MatSort;
-  
-
+  //invocando un metodo del hijo desde el padre
+  @ViewChild(FacturasClienteComponent) facturas: FacturasClienteComponent;
   cantidad: any;
 
 
   constructor(private _formBuilder: FormBuilder,
     //inyectando el servicio de ClienteServicio
     private ns: ClienteService,
+    private fs: FacturaService,
     //inyectando el servicio de InventarioServicio
-   
+
     public dialog: MatDialog,
     private snackBar: MatSnackBar) {
     this.cliente = new Ccliente();
-    
+    this.factura = new Cfactura();
+
   }
 
   ngOnInit() {
@@ -79,26 +74,25 @@ export class PedidoComponent implements OnInit {
       direccion: ['', Validators.required]
     });
     this.pedidoFormGroup = this._formBuilder.group({
-      adress: ['', Validators.required]
+      adress: ['']
     });
-
-    //Obteniendo todos los clientes del servicio inyectado
-    this.getClientes();
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
-
-    
-
+    this.getClientes();
   }
 
+  //Aplicando filtro a mat-table
   applyFilter(filterValue: string) {
+    /*Obteniendo todos los clientes del servicio inyectado
+    hasta que se empieza a filtrar se cargan los datos*/
+
     filterValue = filterValue.trim(); // Remove whitespace
     filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
     this.dataSource.filter = filterValue;
+    console.log(this.dataSource.data);
   }
 
-  
-
+  //Notificando hacerca de la transacción realizada
   openSnackBar(message: string, action: string): void {
     this.snackBar.open(message, action, {
       duration: 2000,
@@ -107,15 +101,18 @@ export class PedidoComponent implements OnInit {
 
   //obteniendo clientes de firebase
   getClientes(): void {
-    this.ns.getClientes().subscribe(data => {
-      this.dataSource.data = data;
-      this.dataLength = data;
-    });
+    this.ns.getClientes().subscribe(
+      data => {
+        this.dataSource.data = data;
+        this.dataLength = data;
+      }, 
+      error =>{
+        console.log('Algo pasó' + error);
+      }    
+    );
   }
 
- 
-
-
+  //Almacenando un nuevo cliente
   onSubmitCliente(): void {
     if (this.clienteFormGroup.status == "VALID" && this.accionCliente == "Guardar") {
       this.cliente.id = this.clienteFormGroup.get('nit').value;
@@ -139,12 +136,15 @@ export class PedidoComponent implements OnInit {
       nombre: nombre,
       direccion: direccion
     })
-    console.log(this.clienteFormGroup.get('nit').value, +" - " + this.clienteFormGroup.get('nombre').value + " - " + this.clienteFormGroup.get('direccion').value)
-    this.accionCliente = "Modificar";
+    this.factura.nit = this.clienteFormGroup.get('nit').value;
+    this.factura.nombre = this.clienteFormGroup.get('nombre').value;
+    this.fs.postColeccion(this.factura); 
+    this.facturas.getFacturasById(this.clienteFormGroup.get('nit').value);   
+    this.accionCliente = "Modificar";    
     stepper.next();
   }
 
-  
+
 }
 
 

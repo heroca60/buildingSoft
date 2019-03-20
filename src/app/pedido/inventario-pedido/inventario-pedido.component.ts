@@ -1,12 +1,15 @@
-import { Component, OnInit, ViewChild, Inject} from '@angular/core';
-import {  
+import { Component, OnInit, ViewChild, Inject } from '@angular/core';
+import {
   MatPaginator,
   MatTableDataSource,
-  MatSort,  
-  MatDialog,  
+  MatSort,
+  MatDialog,
+  MAT_DIALOG_DATA,
+  MatDialogRef
 } from '@angular/material';
 import { Cinventario } from 'src/app/model/cinventario';
 import { InventarioService } from 'src/app/services/inventario.service';
+import { DialogCantidadComponent } from '../../pedido/dialog-cantidad/dialog-cantidad.component';
 
 @Component({
   selector: 'app-inventario-pedido',
@@ -16,7 +19,6 @@ import { InventarioService } from 'src/app/services/inventario.service';
 export class InventarioPedidoComponent implements OnInit {
   //arreglo para los nombres de las columnas del mat-table de clientes
   displayedColumnsInventario: string[] = [
-    'id',
     'codigo',
     'nombre',
     'descripcion',
@@ -30,11 +32,12 @@ export class InventarioPedidoComponent implements OnInit {
   //dataSource para cargar el inventario
   dataSourceInventario = new MatTableDataSource<Cinventario>();
   //variable para la cantidad de inventarios
-  dataInventariosLength: any;  
+  dataInventariosLength: any;
+  data: Cinventario;
   @ViewChild(MatPaginator) paginatorInventario: MatPaginator;
   @ViewChild(MatSort) sortInventario: MatSort;
-  constructor(private is: InventarioService, public dialog: MatDialog) {    
-
+  constructor(private is: InventarioService, public dialog: MatDialog) {
+    this.data = new Cinventario;
   }
 
   ngOnInit() {
@@ -42,6 +45,22 @@ export class InventarioPedidoComponent implements OnInit {
     this.getInventarios();
     this.dataSourceInventario.paginator = this.paginatorInventario;
     this.dataSourceInventario.sort = this.sortInventario;
+  }
+
+  //Abriendo el Dialog para ingresar la cantidad de productos
+  openDialog(
+    id: any,
+    codigo: number,
+    nombre: string,
+    descripcion: string,
+    marca: string,
+    categoria: string,
+    existencia: number,
+    precio: number): void {
+    this.dialog.open(DialogCantidadComponent, {
+      width: '350px',
+      data: { codigo, nombre, descripcion, marca, categoria, existencia, precio }
+    });
   }
 
   applyFilterInventarios(filterValue: string) {
@@ -56,5 +75,5 @@ export class InventarioPedidoComponent implements OnInit {
       this.dataSourceInventario.data = data;
       this.dataInventariosLength = data;
     });
-  }  
+  }
 }

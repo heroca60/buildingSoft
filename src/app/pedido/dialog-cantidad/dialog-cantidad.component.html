@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>
+  <mat-icon>shopping_cart</mat-icon>
+  Agregar producto: 
+</h1>
+<div mat-dialog-content>    
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Cantidad" value="1" autofocus required>
+    </mat-form-field>
+  </form>  
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="agregarPedido()">
+    <mat-icon>
+      add_circle_outline
+    </mat-icon>
+    Agregar
+  </button>
+  <button mat-raised-button color="accent" (click)="onNoClick()">
+    <mat-icon>
+      backspace
+    </mat-icon>
+    Regresar
+  </button>
+</div>

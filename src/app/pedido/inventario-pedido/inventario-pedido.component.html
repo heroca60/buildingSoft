@@ -4,12 +4,6 @@
 </mat-form-field>
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSourceInventario" matSort class="mat-elevation-z8">
-    <!-- Position Column -->
-    <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
-      <td mat-cell *matCellDef="let element"> {{element.id}}</td>
-    </ng-container>
-
     <!-- Name Column -->
     <ng-container matColumnDef="codigo">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Codigo de barras </th>
@@ -57,13 +51,16 @@
       <th mat-header-cell *matHeaderCellDef>Agregar</th>
       <td mat-cell *matCellDef="let element; let i = index">
         <button mat-icon-button color="accent">
-          <mat-icon (click)="openDialogCantidad(
-                    element.codigo,
-                    element.nombre,
-                    element.descripcion,
-                    element.marca,
-                    element.categoria, 
-                    element.existencia)" matTooltip="Agregar producto" matTooltipPosition="right">
+          <mat-icon (click)="openDialog(
+            element.id,
+	          element.codigo,
+	          element.nombre,
+	          element.descripcion,
+	          element.marca,
+	          element.categoria,
+	          element.existencia,
+	          element.precio
+          )" matTooltip="Agregar producto" matTooltipPosition="right">
             add_circle</mat-icon>
         </button>
       </td>
@@ -87,7 +84,7 @@
     <tr mat-footer-row *matFooterRowDef="['noData']"
       [ngClass]="{'hide':!(dataSourceInventario.value!=null && dataSourceInventario.data.length==0)}"></tr>
   </table>
-  <mat-paginator #paginatorInventario [length]="dataInventariosLength?.length" [pageSize]="5" [pageSizeOptions]="[5,10]"
-    showFirstLastButtons>
+  <mat-paginator #paginatorInventario [length]="dataInventariosLength?.length" [pageSize]="1"
+    [pageSizeOptions]="[1,2,5]" showFirstLastButtons>
   </mat-paginator>
 </div>
