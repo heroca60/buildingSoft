@@ -1,0 +1,520 @@
+Looking for git in: git
+Using git 2.7.4 from git
+> git rev-parse --show-toplevel
+> git config --get commit.template
+Open repository: /home/hcalderon/Documents/Angular/analisis
+> git status -z -u
+> git check-ignore -z --stdin
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :src/app/ng-for/ng-for.component.html
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.ts
+> git ls-files --stage -- src/app/ng-for/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/ng-for/ng-for.component.html
+> git ls-files --stage -- src/app/ng-for/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/ng-for/ng-for.component.css
+> git ls-files --stage -- src/app/ng-for/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/ng-for/ng-for.component.html
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.ts
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.html
+> git ls-files --stage -- src/app/ng-for/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/ng-for/ng-for.component.css
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.html
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.ts
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.html
+> git ls-files --stage -- src/app/ng-for/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/ng-for/ng-for.component.ts
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.html
+> git ls-files --stage -- src/app/ng-for/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/ng-for/ng-for.component.css
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.html
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.css
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.html
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.ts
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.html
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.ts
+> git ls-files --stage -- src/app/ng-for/
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin
+> git show :src/app/model/alumno.ts
+> git ls-files --stage -- src/app/model/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/ng-for/ng-for.component.ts
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/model/alumno.ts
+> git ls-files --stage -- src/app/model/
+> git show :src/app/ng-for/ng-for.component.ts
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.css
+> git ls-files --stage -- src/app/ng-for/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/ng-for/ng-for.component.ts
+> git ls-files --stage -- src/app/ng-for/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/ng-for/ng-for.component.html
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.ts
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.html
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.ts
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.html
+> git ls-files --stage -- src/app/ng-for/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/ng-for/ng-for.component.ts
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.css
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.ts
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.html
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.ts
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.html
+> git ls-files --stage -- src/app/ng-for/
+> git status -z -u
+> git check-ignore -z --stdin
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git check-ignore -z --stdin
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git show :src/app/padre/padre.component.html
+> git ls-files --stage -- src/app/padre/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/app.component.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/padre/padre.component.html
+> git ls-files --stage -- src/app/padre/
+> git show :src/app/ng-for/ng-for.component.ts
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/ng-for/ng-for.component.html
+> git ls-files --stage -- src/app/ng-for/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/app.component.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/ng-for/ng-for.component.html
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/app.component.html
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/ng-for/ng-for.component.html
+> git ls-files --stage -- src/app/ng-for/
+> git show :src/app/app.component.html
+> git show :src/app/ng-for/ng-for.component.html
+> git ls-files --stage -- src/app/ng-for/
+> git check-ignore -z --stdin
+> git show :src/app/hijo/hijo.component.ts
+> git ls-files --stage -- src/app/hijo/
+> git show :src/app/hijo/hijo.component.html
+> git ls-files --stage -- src/app/hijo/
+> git show :src/app/padre/padre.component.html
+> git ls-files --stage -- src/app/padre/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/hijo/hijo.component.ts
+> git ls-files --stage -- src/app/hijo/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/padre/padre.component.html
+> git ls-files --stage -- src/app/padre/
+> git show :src/app/padre/padre.component.ts
+> git ls-files --stage -- src/app/padre/
+> git show :src/app/padre/padre.component.html
+> git ls-files --stage -- src/app/padre/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/hijo/hijo.component.ts
+> git ls-files --stage -- src/app/hijo/
+> git show :src/app/hijo/hijo.component.html
+> git ls-files --stage -- src/app/hijo/
+> git show :src/app/app.component.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/hijo/hijo.component.html
+> git ls-files --stage -- src/app/hijo/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/padre/padre.component.html
+> git ls-files --stage -- src/app/padre/
+> git show :src/app/hijo/hijo.component.html
+> git ls-files --stage -- src/app/hijo/
+> git show :src/app/padre/padre.component.ts
+> git ls-files --stage -- src/app/padre/
+> git show :src/app/hijo/hijo.component.html
+> git ls-files --stage -- src/app/hijo/
+> git show :src/app/hijo/hijo.component.ts
+> git ls-files --stage -- src/app/hijo/
+> git show :src/app/hijo/hijo.component.html
+> git ls-files --stage -- src/app/hijo/
+> git show :src/app/hijo/hijo.component.css
+> git ls-files --stage -- src/app/hijo/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/hijo/hijo.component.html
+> git ls-files --stage -- src/app/hijo/
+> git show :src/app/hijo/hijo.component.css
+> git ls-files --stage -- src/app/hijo/
+> git show :src/app/hijo/hijo.component.html
+> git ls-files --stage -- src/app/hijo/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/hijo/hijo.component.ts
+> git ls-files --stage -- src/app/hijo/
+> git show :src/app/padre/padre.component.ts
+> git ls-files --stage -- src/app/padre/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/hijo/hijo.component.ts
+> git ls-files --stage -- src/app/hijo/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/padre/padre.component.html
+> git ls-files --stage -- src/app/padre/
+> git show :src/app/padre/padre.component.ts
+> git ls-files --stage -- src/app/padre/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/hijo/hijo.component.ts
+> git ls-files --stage -- src/app/hijo/
+> git show :src/app/padre/padre.component.html
+> git ls-files --stage -- src/app/padre/
+> git show :src/app/padre/padre.component.ts
+> git ls-files --stage -- src/app/padre/
+> git show :src/app/padre/padre.component.html
+> git ls-files --stage -- src/app/padre/
+> git show :src/app/app.component.css
+> git show :src/styles.css
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/styles.css
+> git show :src/app/hijo/hijo.component.html
+> git ls-files --stage -- src/app/hijo/
+> git show :src/app/hijo/hijo.component.css
+> git ls-files --stage -- src/app/hijo/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/styles.css
+> git show :src/app/hijo/hijo.component.css
+> git ls-files --stage -- src/app/hijo/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/styles.css
+> git show :src/app/hijo/hijo.component.css
+> git ls-files --stage -- src/app/hijo/
+> git show :src/app/padre/padre.component.ts
+> git ls-files --stage -- src/app/padre/
+> git show :src/app/padre/padre.component.html
+> git ls-files --stage -- src/app/padre/
+> git show :src/app/padre/padre.component.css
+> git ls-files --stage -- src/app/padre/
+> git show :src/app/padre/padre.component.html
+> git ls-files --stage -- src/app/padre/
+> git show :src/app/hijo/hijo.component.ts
+> git ls-files --stage -- src/app/hijo/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/hijo/hijo.component.html
+> git ls-files --stage -- src/app/hijo/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/app/hijo/hijo.component.ts
+> git ls-files --stage -- src/app/hijo/
+> git show :src/app/hijo/hijo.component.html
+> git ls-files --stage -- src/app/hijo/
+> git show :src/app/hijo/hijo.component.ts
+> git ls-files --stage -- src/app/hijo/
+> git show :src/app/hijo/hijo.component.html
+> git ls-files --stage -- src/app/hijo/
+> git show :src/app/hijo/hijo.component.ts
+> git ls-files --stage -- src/app/hijo/
+> git show :src/app/hijo/hijo.component.html
+> git ls-files --stage -- src/app/hijo/
+> git show :src/app/hijo/hijo.component.html
+> git ls-files --stage -- src/app/hijo/
+> git show :src/app/padre/padre.component.html
+> git ls-files --stage -- src/app/padre/
+> git show :src/app/padre/padre.component.ts
+> git ls-files --stage -- src/app/padre/
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git show :src/app/padre/padre.component.html
+> git ls-files --stage -- src/app/padre/

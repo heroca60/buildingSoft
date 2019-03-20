@@ -49,8 +49,8 @@ export class ClienteService {
 
   postCliente(cliente: Ccliente) {
     try {
-      //inserción con id manual utilizando .doc  .set
-      this.afs.collection('clientes').doc(cliente.id).set({
+      //inserción con id manual utilizando .doc  .set      
+      this.afs.collection('clientes').doc(cliente.id).set({        
         nombre: cliente.nombre,
         direccion: cliente.direccion
       });

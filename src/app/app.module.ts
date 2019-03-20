@@ -29,6 +29,12 @@ import { ListInventarioComponent } from './admin/inventario/list-inventario/list
 import { ReadInventarioComponent } from './admin/inventario/read-inventario/read-inventario.component';
 import { VentasComponent } from './cajero/ventas/ventas.component';
 import { PedidoComponent } from './pedido/pedido/pedido.component';
+import { InventarioPedidoComponent } from './pedido/inventario-pedido/inventario-pedido.component';
+import { DetallePedidoComponent } from './pedido/detalle-pedido/detalle-pedido.component';
+import { DashboardPedidoComponent } from './pedido/dashboard-pedido/dashboard-pedido.component';
+import { DialogCantidadComponent } from './pedido/dialog-cantidad/dialog-cantidad.component';
+import { FacturasClienteComponent } from './pedido/facturas-cliente/facturas-cliente.component';
+
 
 @NgModule({
   declarations: [
@@ -41,11 +47,17 @@ import { PedidoComponent } from './pedido/pedido/pedido.component';
     ReadMarcaComponent,
     InventarioComponent,
     CreateInventarioComponent,
-    ListInventarioComponent, 
-    ReadInventarioComponent, 
-    VentasComponent, 
-    PedidoComponent    
+    ListInventarioComponent,
+    ReadInventarioComponent,
+    VentasComponent,
+    PedidoComponent,
+    InventarioPedidoComponent,
+    DetallePedidoComponent,
+    DashboardPedidoComponent,
+    DialogCantidadComponent,
+    FacturasClienteComponent
   ],
+  entryComponents: [DialogCantidadComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

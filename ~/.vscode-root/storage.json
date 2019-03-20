@@ -5,6 +5,7 @@
     "pickerWorkingDir": "/home/hcalderon/Documents/Angular",
     "openedPathsList": {
         "workspaces2": [
+            "file:///home/hcalderon/Documents/Angular/analisis",
             "file:///home/hcalderon/Documents/Angular/buildingSoft"
         ],
         "files2": []
@@ -14,12 +15,12 @@
         "lastActiveWindow": {
             "folderUri": {
                 "$mid": 1,
-                "fsPath": "/home/hcalderon/Documents/Angular/buildingSoft",
-                "external": "file:///home/hcalderon/Documents/Angular/buildingSoft",
-                "path": "/home/hcalderon/Documents/Angular/buildingSoft",
+                "fsPath": "/home/hcalderon/Documents/Angular/analisis",
+                "external": "file:///home/hcalderon/Documents/Angular/analisis",
+                "path": "/home/hcalderon/Documents/Angular/analisis",
                 "scheme": "file"
             },
-            "backupPath": "/home/hcalderon/Documents/Angular/buildingSoft/~/.vscode-root/Backups/a0d5cf0841bb428adc36e7549477f027",
+            "backupPath": "/home/hcalderon/Documents/Angular/buildingSoft/~/.vscode-root/Backups/33c6387c9463780074009ebc88e8526f",
             "uiState": {
                 "mode": 0,
                 "x": 0,
