@@ -19,7 +19,8 @@ export class ClienteService {
 
   //Función que retorna un arreglo de documentos desde Firebase
   getClientes(): Observable<Ccliente[]> {
-    this.clientesCollections = this.afs.collection('clientes');
+    this.clientesCollections = this.afs.collection('clientes',
+    ref => ref.orderBy('nombre','asc'));
     return this.clientes = this.clientesCollections.snapshotChanges()
       .pipe(map(actions => {
         return actions.map(action => {

@@ -3,9 +3,9 @@
   Agregar producto: 
 </h1>
 <div mat-dialog-content>    
-  <form>
+  <form [formGroup]="cantidadFormGroup">
     <mat-form-field>
-      <input matInput placeholder="Cantidad" value="1" autofocus required>
+      <input matInput placeholder="Cantidad" value="1" formControlName="cantidad" autofocus required>
     </mat-form-field>
   </form>  
 </div>

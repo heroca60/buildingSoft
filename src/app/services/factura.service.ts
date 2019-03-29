@@ -16,6 +16,7 @@ export class FacturaService implements Ifirebase {
   facturasCollections: AngularFirestoreCollection<Cfactura>;
   facturas: Observable<Cfactura[]>;
   ruta: string;
+  idDocumento: string;
   constructor(private afs: AngularFirestore) { }
 
   //Select all
@@ -91,5 +92,10 @@ export class FacturaService implements Ifirebase {
     } catch (error) {
       console.log(error);
     }
+  }
+
+  //Seteando el id del documento para ser recuperado por su hermano
+  setIdDocumento(id:string):void{
+    this.idDocumento = id;
   }
 }

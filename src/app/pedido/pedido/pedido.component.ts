@@ -25,6 +25,7 @@ export class PedidoComponent implements OnInit {
   clientes: Ccliente[];
   factura: Cfactura;  
   isLinear = true;
+  step:MatStepper;
   clienteFormGroup: FormGroup;
   pedidoFormGroup: FormGroup;
   flagProgress: boolean = false;
@@ -130,6 +131,19 @@ export class PedidoComponent implements OnInit {
     }
   }
 
+  cargarPendientes(id: any, nombre: any, direccion: any, stepper: MatStepper): void {
+    this.clienteFormGroup.setValue({
+      nit: id,
+      nombre: nombre,
+      direccion: direccion
+    })    
+    this.facturas.getFacturasById(this.clienteFormGroup.get('nit').value);   
+    this.accionCliente = "Modificar";    
+    stepper.next();
+    this.facturas.obtenerStep(stepper);
+  }
+
+
   agregarPedido(id: any, nombre: any, direccion: any, stepper: MatStepper): void {
     this.clienteFormGroup.setValue({
       nit: id,
@@ -142,9 +156,8 @@ export class PedidoComponent implements OnInit {
     this.facturas.getFacturasById(this.clienteFormGroup.get('nit').value);   
     this.accionCliente = "Modificar";    
     stepper.next();
-  }
-
-
+    this.facturas.obtenerStep(stepper);
+  }  
 }
 
 

@@ -1,11 +1,9 @@
 import { Component, OnInit, ViewChild, Inject, Input } from '@angular/core';
 import {
-  MatSnackBar,
   MatPaginator,
   MatTableDataSource,
   MatSort,
-  MatStepper,
-  MatDialog,
+  MatStepper
 
 } from '@angular/material';
 import { FacturaService } from 'src/app/services/factura.service';
@@ -24,6 +22,7 @@ export class FacturasClienteComponent implements OnInit {
     'actions'
   ];
 
+  step: MatStepper;
   //dataSource para cargar los clientes
   dataSource = new MatTableDataSource<Cfactura>();
   //variable para la cantidad de clientes
@@ -37,7 +36,9 @@ export class FacturasClienteComponent implements OnInit {
   //Para el ordenamieto del mat-table
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private ns: FacturaService) {
+  constructor(
+    private ns: FacturaService
+  ) {
   }
 
   ngOnInit() {
@@ -68,5 +69,16 @@ export class FacturasClienteComponent implements OnInit {
       }
     );
   }
+
+  prepararDetalle(id: any): void {
+    this.ns.setIdDocumento(id);
+    console.log(id);
+    this.step.next();
+  }
+
+  obtenerStep(step:MatStepper):void{
+    this.step = step;
+  }
+  
 
 }

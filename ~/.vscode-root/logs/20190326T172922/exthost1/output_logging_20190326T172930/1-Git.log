@@ -1,0 +1,17 @@
+Looking for git in: git
+Using git 2.7.4 from git
+> git rev-parse --show-toplevel
+> git config --get commit.template
+Open repository: /home/hcalderon/Documents/Angular/analisis
+> git status -z -u
+> git show :src/app/padre/padre.component.html
+> git check-ignore -z --stdin
+> git ls-files --stage -- src/app/padre/
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+fatal: no upstream configured for branch 'master'
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git check-ignore -z --stdin
+> git check-ignore -z --stdin

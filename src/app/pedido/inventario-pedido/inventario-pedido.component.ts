@@ -59,7 +59,7 @@ export class InventarioPedidoComponent implements OnInit {
     precio: number): void {
     this.dialog.open(DialogCantidadComponent, {
       width: '350px',
-      data: { codigo, nombre, descripcion, marca, categoria, existencia, precio }
+      data: { id, codigo, nombre, descripcion, marca, categoria, existencia, precio }
     });
   }
 

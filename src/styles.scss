@@ -17,6 +17,12 @@ mat-card{
 table {
   width: 100%;
 }
+tr.mat-footer-row {
+  font-weight: bold;
+  text-align: center;
+  color: lightgrey;
+}
+
 .mat-form-field {
   font-size: 14px;
   width: 100%;

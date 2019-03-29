@@ -61,9 +61,13 @@
           <ng-container matColumnDef="actions">
             <th mat-header-cell *matHeaderCellDef>Acciones</th>
             <td mat-cell *matCellDef="let element; let i = index">
-              <button mat-icon-button color="accent" matTooltip="Preparar el pedido" matTooltipPosition="right"
-                (click)="agregarPedido(element.id,element.nombre, element.direccion,stepper)">
+              <button mat-icon-button color="accent" matTooltip="Pendientes" matTooltipPosition="right"
+                (click)="cargarPendientes(element.id,element.nombre, element.direccion,stepper)">
                 <mat-icon>shopping_cart</mat-icon>
+              </button>
+              <button mat-icon-button color="accent" matTooltip="Crear nuevo pedido" matTooltipPosition="right"
+                (click)="agregarPedido(element.id,element.nombre, element.direccion,stepper)">
+                <mat-icon>add_circle</mat-icon>
               </button>
             </td>
           </ng-container>

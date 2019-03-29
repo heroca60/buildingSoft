@@ -1,4 +1,4 @@
-<h2>Buscar clientes</h2>
+<h2></h2>
 <!-- Mat-table FILTER -->
 <mat-form-field>
   <input matInput placeholder="Ingrese un valor de busqueda" (keyup)="applyFilter($event.target.value)" autofocus>
@@ -27,7 +27,8 @@
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef>Acciones</th>
       <td mat-cell *matCellDef="let element; let i = index">
-        <button mat-icon-button color="accent" matTooltip="Cargar pedido" matTooltipPosition="right">
+        <button mat-icon-button color="accent" matTooltip="Agregar productos" matTooltipPosition="right"
+          (click)="prepararDetalle(element.id)">
           <mat-icon>add_circle</mat-icon>
         </button>
       </td>

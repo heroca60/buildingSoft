@@ -3,7 +3,8 @@
     (keyup)="applyFilterInventarios($event.target.value)" autofocus>
 </mat-form-field>
 <div class="mat-elevation-z8">
-  <table mat-table [dataSource]="dataSourceInventario" matSort class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSourceInventario" matSort class="mat-elevation-z8">   
+
     <!-- Name Column -->
     <ng-container matColumnDef="codigo">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Codigo de barras </th>
@@ -43,7 +44,7 @@
     <!-- Name Column -->
     <ng-container matColumnDef="precio">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Precio </th>
-      <td mat-cell *matCellDef="let element"> Q{{element.precio}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.precio | currency:"GTQ":"Q"}} </td>
     </ng-container>
 
     <!-- Columna de acciones -->
@@ -51,8 +52,7 @@
       <th mat-header-cell *matHeaderCellDef>Agregar</th>
       <td mat-cell *matCellDef="let element; let i = index">
         <button mat-icon-button color="accent">
-          <mat-icon (click)="openDialog(
-            element.id,
+          <mat-icon (click)="openDialog(            
 	          element.codigo,
 	          element.nombre,
 	          element.descripcion,
